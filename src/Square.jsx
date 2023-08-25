@@ -4,7 +4,6 @@ export default function Square ({children, isSelected, updateBoard}){
     return `square ${isSelected ? 'selected': ''}`
   }
 
-  
   return(
     <div className = {squareClases()} onClick={updateBoard}>
       {children}

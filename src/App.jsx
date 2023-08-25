@@ -15,6 +15,7 @@ const TURNS = {
 function App() {
   const [board, setBoard] = useState(Array(9).fill(null))
   const [turn, setTurn] = useState(TURNS.X)
+  console.log(board)
   return(
     <>
       <h1>Tic Tac Toe</h1>
@@ -23,9 +24,9 @@ function App() {
       >
         {board.map((_, index) => (
         <Square key={index}
-                updateBoard={() => updateBoard(turn, setTurn)}
+                updateBoard={() => updateBoard(turn, setTurn, board, setBoard, index)}
         >
-
+        {board[index]}
         </Square>
       ))}
       </section>
