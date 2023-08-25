@@ -1,5 +1,10 @@
+//Importaciones de react
 import { useState } from "react"
+//Importaciones de Componenetes
 import Square from "./Square"
+//Otras Importaciones
+import updateBoard from './helpers/updateBoard'
+
 
 const TURNS = {
   X: 'x',
@@ -10,16 +15,16 @@ const TURNS = {
 function App() {
   const [board, setBoard] = useState(Array(9).fill(null))
   const [turn, setTurn] = useState(TURNS.X)
-  
-
-  return (
+  return(
     <>
       <h1>Tic Tac Toe</h1>
       <section 
       className="gameBoard"
       >
         {board.map((_, index) => (
-        <Square key={index}>
+        <Square key={index}
+                updateBoard={() => updateBoard(turn, setTurn)}
+        >
 
         </Square>
       ))}
@@ -37,3 +42,4 @@ function App() {
 }
 
 export default App
+export { TURNS }
