@@ -1,7 +1,6 @@
 import { TURNS } from '../App';
 
-export default function updateBoard(turn, setTurn, board, setBoard, index) {
-  // Copia el tablero actual antes de modificarlo
+export default function updateBoard(turn, setTurn, board, setBoard, index) {   
   const updatedBoard = [...board];
 
   if (turn === TURNS.X && board[index] === null) {
@@ -12,6 +11,5 @@ export default function updateBoard(turn, setTurn, board, setBoard, index) {
     setTurn(TURNS.X);
   }
 
-  // Actualiza el estado del tablero con el nuevo tablero modificado
   setBoard(updatedBoard);
 }
