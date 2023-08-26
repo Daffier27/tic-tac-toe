@@ -1,7 +1,10 @@
 //Importaciones
 import  { useState } from "react";
+
 import Square from "./components/Square";
 import Button from './components/Button';
+import Winner from './components/Winner';
+
 import updateBoard from './helpers/updateBoard';
 import reset from './helpers/reset';
 import resetsvg from "./public/reset.svg";
@@ -23,11 +26,18 @@ const WINS = [
   [2,4,6]
 ]
 
+
 //Logica de la App
 function App() {
   const [board, setBoard] = useState(Array(9).fill(null));
   const [turn, setTurn] = useState(TURNS.X);
   const [winner, setWinner] = useState(false)
+  let winnerview = null;
+  
+  if (winner !== false) {
+    winnerview = <Winner winner={winner}/>
+  }
+
   return (
     <>
       <h1>Tic Tac Toe</h1>
@@ -46,8 +56,10 @@ function App() {
         <Square isSelected={turn === TURNS.O}>{TURNS.O}</Square>
       </section>
       <section className="reset-button">
-      <Button svg={resetsvg} resetBoard={() => reset(setBoard, setTurn, setWinner)} />
+        <Button svg={resetsvg} resetBoard={() => reset(setBoard, setTurn, setWinner)} />
       </section>
+      
+      {winnerview}
     </>
   );
 }
