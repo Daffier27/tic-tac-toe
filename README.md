@@ -8,7 +8,7 @@
 
 **Descripción:** Este proyecto es mi primera incursión en el desarrollo con React. Se trata de un juego sencillo de 3 en raya (Tic Tac Toe), donde dos jugadores se turnan para marcar sus movimientos en una cuadrícula de 3x3. El juego determina quién gana, quién pierde y si hay empates.
 
-## Mejoras
+## Mejoras o To Do
 - Opción de jugar contra una IA.
 - Modo Oscuro.
 - Algunas mejoras visualez y refactorización del codigo.

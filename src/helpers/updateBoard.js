@@ -1,4 +1,4 @@
-import { TURNS } from '../App';
+import { TURNS } from './constants';
 import checkWinner from './checkWinner';
 
 export default function updateBoard(turn, setTurn, board, setBoard, index,  winner, setWinner) {   

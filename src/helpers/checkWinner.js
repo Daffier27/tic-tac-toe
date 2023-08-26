@@ -1,4 +1,4 @@
-import { WINS } from "../App";
+import { WINS } from "./constants";
 
 export default function checkWinner (board){
   

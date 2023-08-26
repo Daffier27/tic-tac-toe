@@ -2,9 +2,11 @@
 function Button({ svg, resetBoard }) {
   
   return (
-    <button className="button" onClick={resetBoard}>
-      <img src={svg} alt="Reset" />
-    </button>
+    <section className="reset-button">
+      <button className="button" onClick={resetBoard}>
+        <img src={svg} alt="Reset" />
+      </button>
+    </section>
   );
 }
 
