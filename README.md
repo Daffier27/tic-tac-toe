@@ -32,6 +32,6 @@
 
 ## Conclusiones
 
-Este proyecto me permitió familiarizarme con el desarrollo en React y practicar la construcción de componentes reutilizables, la gestión de estados y la interacción entre componentes. Además, me brindó la oportunidad de aprender sobre el diseño y la organización de proyectos en React, así como también la importancia de las pruebas y la depuración.
+Este proyecto me permitió familiarizarme con el desarrollo en React y practicar la construcción de componentes reutilizables, la gestión de estados y la interacción entre componentes. Además, me brindó la oportunidad de aprender sobre el diseño y la organización de proyectos en React.
 
-Aunque el juego es sencillo, representa un primer paso importante en mi camino de aprendizaje en el desarrollo web con React.
+
