@@ -1,7 +1,8 @@
 export default function Winner({winner}){
+  
   return(
     <section className="winner-section">
-      <p>El ganador es {winner}</p>
+      <p>{winner === 'Empate' ? 'Empate': `Ganó ${winner}`}</p>
     </section>
   )
 }

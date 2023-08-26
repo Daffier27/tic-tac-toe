@@ -19,4 +19,5 @@ export default function checkWinner (board){
       return 'Empate'
     }
 
+    return null
 }

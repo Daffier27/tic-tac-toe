@@ -31,11 +31,14 @@ const WINS = [
 function App() {
   const [board, setBoard] = useState(Array(9).fill(null));
   const [turn, setTurn] = useState(TURNS.X);
-  const [winner, setWinner] = useState(false)
+  const [winner, setWinner] = useState(null)
+
   let winnerview = null;
   
-  if (winner !== false) {
+  if (winner !== null && winner !== 'Empate') {
     winnerview = <Winner winner={winner}/>
+  }else if (winner === 'Empate') { // Mostrar empate
+    winnerview = <Winner winner="Empate" />;
   }
 
   return (
