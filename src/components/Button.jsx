@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types'
 
-export default function Button({ svg, resetBoard }) {
+export default function Button({ svg, resetBoard, mode }) {
   
   return (
     <section className="reset-button">
-      <button className="button" onClick={resetBoard}>
+      <button className={`button ${mode==='dark' ? 'dark-mode' : ''}`} onClick={resetBoard}>
         <img src={svg} alt="Reset" />
       </button>
     </section>
@@ -14,5 +14,6 @@ export default function Button({ svg, resetBoard }) {
 Button.propTypes = {
   svg: PropTypes.string.isRequired,
   resetBoard: PropTypes.func.isRequired,
+  mode: PropTypes.string.isRequired
 };
 

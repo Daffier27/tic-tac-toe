@@ -1,12 +1,11 @@
 import PropTypes from 'prop-types'
 
-export default function Square ({children, isSelected, updateBoard}){
-  const squareClases = () => {
-    return `square ${isSelected ? 'selected': ''}`
-  }
+export default function Square ({children, isSelected, updateBoard, mode}){
+  
 
   return(
-    <div className = {squareClases()} onClick={updateBoard}>
+    <div className={`square ${isSelected ? 'selected': ''} ${mode === 'dark' ? 'dark-mode' : ''}`} 
+    onClick={updateBoard}>
       {children}
     </div>
   )
@@ -14,6 +13,7 @@ export default function Square ({children, isSelected, updateBoard}){
 
 Square.propTypes = {
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  isSelected: PropTypes.bool.isRequired,
-  updateBoard: PropTypes.func.isRequired,
+  isSelected: PropTypes.bool,
+  updateBoard: PropTypes.func,
+  mode: PropTypes.string
 }

@@ -135,10 +135,10 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* Sección de ganador */
+
 .winner-section {
   margin-top: 20px;
-  font-size: 26px; /* Aumentado para ajustar al nuevo tamaño */
+  font-size: 26px; 
   font-weight: bold;
   text-align: center;
   border: #ccc;
@@ -180,14 +180,6 @@ body.dark-mode {
 .square.selected.dark-mode {
   background-color: #666;
   color: #010101;
-}
-
-.turn-section.dark-mode {
-  background-color: #444;
-}
-
-.reset-button.dark-mode {
-  margin-top: 20px;
 }
 
 .button.dark-mode {
