@@ -1,4 +1,5 @@
 import  { useState, useEffect } from "react";
+import { CiUndo } from 'react-icons/ci';
 
 import Button from './components/Button';
 import Winner from './components/Winner';
@@ -38,7 +39,9 @@ function App() {
         mode={mode}
       />
       <TurnSection turn={turn} setTurn={setTurn} mode={mode}/>
-      <Button svg={resetsvg} resetBoard={() => reset(setBoard, setTurn, setWinner)} mode={mode} />
+      <Button svg={resetsvg} resetBoard={() => reset(setBoard, setTurn, setWinner)} mode={mode} >
+        <CiUndo className='undo-icon'/>
+      </Button>
       <Winner winner={winner} mode={mode} /> 
     </>
   );

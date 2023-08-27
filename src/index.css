@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 
 /* Estilos generales */
@@ -15,23 +14,30 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  overflow-y: hidden;
+  
+  
 }
 
-.container {
-  text-align: center;
+.root {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
 h1 {
   margin-bottom: 20px;
   text-align: center;
-  font-size: 2.64rem; /* Aumentado en un 20% */
+  font-size: 2.64rem; 
 }
 
 /* Tablero de juego */
 .gameBoard {
   display: grid;
-  grid-template-columns: repeat(3, 132px); /* Aumentado en un 20% */
+  grid-template-columns: repeat(3, 132px); 
   grid-gap: 5px;
   background-color: #818181;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -83,6 +89,10 @@ h1 {
 
 .button:hover {
   background-color: #0056b3;
+}
+
+.button .undo-icon{
+  stroke-width: 1;
 }
 
 /* Interruptor de modo oscuro */
@@ -180,7 +190,7 @@ body.dark-mode {
 }
 
 .square.selected.dark-mode {
-  background-color: #666;
+  background-color: #b8b8b8;
   color: #010101;
 }
 
