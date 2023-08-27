@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 export default function Winner({winner}){
   if(winner === null){
     return
@@ -9,3 +10,8 @@ export default function Winner({winner}){
     </section>
   )
 }
+
+  //Validation
+  Winner.propTypes = {
+    winner: PropTypes.string.isRequired
+  }

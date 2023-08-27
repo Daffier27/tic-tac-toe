@@ -11,7 +11,6 @@
 ## Mejoras o To Do
 - Opción de jugar contra una IA.
 - Modo Oscuro.
-- Algunas mejoras visualez y refactorización del codigo.
 - Añadir sonido
 - Puntuación
 

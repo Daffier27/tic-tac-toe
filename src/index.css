@@ -44,6 +44,8 @@ h1 {
   font-size: 24px;
   cursor: pointer;
   color:#818181;
+  font-size: 3.5rem;
+  
 }
 
 .square.selected {

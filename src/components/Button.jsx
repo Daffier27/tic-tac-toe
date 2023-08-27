@@ -1,5 +1,6 @@
-// eslint-disable-next-line react/prop-types
-function Button({ svg, resetBoard }) {
+import PropTypes from 'prop-types'
+
+export default function Button({ svg, resetBoard }) {
   
   return (
     <section className="reset-button">
@@ -10,4 +11,8 @@ function Button({ svg, resetBoard }) {
   );
 }
 
-export default Button;
+Button.propTypes = {
+  svg: PropTypes.string.isRequired,
+  resetBoard: PropTypes.func.isRequired,
+};
+

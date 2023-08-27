@@ -1,4 +1,3 @@
-//Importaciones
 import  { useState } from "react";
 
 import Button from './components/Button';
@@ -6,16 +5,10 @@ import Winner from './components/Winner';
 import Board from "./components/Board";
 import TurnSection from "./components/TurnSection";
 
-
 import reset from './helpers/reset';
 import resetsvg from "./public/reset.svg";
 import {TURNS} from './helpers/constants'
 
-
-
-
-
-//Logica de la App
 function App() {
   const [board, setBoard] = useState(Array(9).fill(null));
   const [turn, setTurn] = useState(TURNS.X);
@@ -39,6 +32,5 @@ function App() {
   );
 }
 
-//Exportaciones
 export default App;
 

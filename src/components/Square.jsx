@@ -1,4 +1,5 @@
-// eslint-disable-next-line react/prop-types
+import PropTypes from 'prop-types'
+
 export default function Square ({children, isSelected, updateBoard}){
   const squareClases = () => {
     return `square ${isSelected ? 'selected': ''}`
@@ -9,4 +10,10 @@ export default function Square ({children, isSelected, updateBoard}){
       {children}
     </div>
   )
+}
+
+Square.propTypes = {
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  isSelected: PropTypes.bool.isRequired,
+  updateBoard: PropTypes.func.isRequired,
 }
